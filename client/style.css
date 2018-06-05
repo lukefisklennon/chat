@@ -38,11 +38,8 @@ html, body {
 }
 
 #chat-messages {
-	padding: 10px;
-	padding-left: 0px;
 	position: absolute;
 	bottom: 0px;
-	padding-left: 15px;
 	padding-top: -5px;
 	width: 100%;
 	max-height: 100%;
@@ -87,14 +84,20 @@ html, body {
 
 .message {
 	display: inline-block;
-	margin-top: 10px;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
 	box-sizing: border-box;
 	position: relative;
+	width: 100%;
 }
 
 .message-bubble {
 	max-width: calc(100% - 54px - 5px);
-	margin-left: 1px;
+	box-sizing: border-box;
+	word-break: break-word;
+	padding: 15px;
+	padding-left: 16px;
 }
 
 .mine-true {
@@ -110,7 +113,6 @@ html, body {
 #chat-input, .message-bubble {
 	border-radius: 15px;
 	border-bottom-left-radius: 5px;
-	padding: 15px;
 	font-size: 18px;
 	box-sizing: border-box;
 	position: relative;
@@ -121,6 +123,7 @@ html, body {
 	outline: none;
 	border: 1px solid #e6e6e6;
 	display: inline-block;
+	padding: 15px;
 }
 
 #chat-input:focus {
