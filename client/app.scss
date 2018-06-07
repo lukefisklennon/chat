@@ -1,11 +1,5 @@
-html, body {
-	width: 100%;
-	height: 100%;
-	margin: 0px;
-	padding: 0px;
-	overflow: hidden;
-	font-family: 'Roboto', sans-serif;
-}
+@import "./common.scss";
+@import "./settings.scss";
 
 #left, #right {
 	height: 100%;
@@ -13,7 +7,7 @@ html, body {
 
 #left {
 	width: 320px;
-	border-right: 1px solid #e6e6e6;
+	border-right: 1px solid $light-gray;
 	float: left;
 }
 
@@ -29,7 +23,7 @@ html, body {
 
 #right-top {
 	height: 120px;
-	border-bottom: 1px solid #e6e6e6;
+	border-bottom: 1px solid $light-gray;
 }
 
 #right-bottom {
@@ -63,7 +57,7 @@ html, body {
 	width: 54px;
 	height: 54px;
 	border-radius: 50%;
-	background-color: #e6e6e6;
+	background-color: $light-gray;
 	display: inline-block;
 	float: left;
 	margin-right: 5px;
@@ -101,12 +95,12 @@ html, body {
 }
 
 .mine-true {
-	background-color: #e6e6e6;
+	background-color: $light-gray;
 	z-index: 2;
 }
 
 .mine-false {
-	background-color: #0080ff;
+	background-color: $primary-color;
 	color: #fff;
 }
 
@@ -120,16 +114,11 @@ html, body {
 
 #chat-input {
 	width: calc(100% - 54px - 5px);
-	outline: none;
-	border: 1px solid #e6e6e6;
+	border: 1px solid $light-gray;
 	display: inline-block;
 	padding: 15px;
 }
 
 #chat-input:focus {
-	background-color: #e6e6e6;
-}
-
-input {
-	font-family: 'Roboto', sans-serif;
+	background-color: $light-gray;
 }

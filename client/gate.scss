@@ -1,0 +1,95 @@
+@import "./common.scss";
+@import "./settings.scss";
+
+$input-height: 50px;
+
+body {
+	background-color: $primary-color;
+	color: #fff;
+}
+
+#middle {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+#logo {
+	font-size: 80px;
+	font-weight: 700;
+}
+
+.card {
+	width: 400px;
+	padding: 10px;
+	margin-top: 5px;
+	background-color: #fff;
+	color: #595959;
+	border-radius: 10px;
+	font-size: 18px;
+}
+
+h1 {
+	color: #000;
+	margin: 0px;
+	margin-bottom: 5px;
+}
+
+input {
+	width: 100%;
+	height: $input-height;
+	border: 1px solid #cccccc;
+	border-radius: 10px;
+	margin-top: 5px;
+	box-sizing: border-box;
+	font-size: 18px;
+	text-align: center;
+}
+
+input:focus {
+	border-color: #999999;
+}
+
+button {
+	width: 100%;
+	height: $input-height;
+	border: none;
+	background-color: $primary-color;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 10px;
+	margin-top: 5px;
+	outline: none;
+	cursor: pointer;
+	transition: background-color 100ms;
+	box-sizing: border-box;
+}
+
+button:hover {
+	background-color: $primary-color-light;
+}
+
+button:active {
+	background-color: $primary-color-dark;
+}
+
+.account-button {
+	width: calc(50% - 3px);
+	background: none;
+	color: $primary-color;
+	border: 1px solid $primary-color;
+}
+
+.account-button:hover {
+	background-color: $primary-color;
+	border-color: $primary-color;
+	color: #fff;
+}
+
+.account-button:active, {
+	background-color: $primary-color-dark;
+	border-color: $primary-color-dark;
+	color: #fff;
+}
