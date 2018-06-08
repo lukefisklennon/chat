@@ -1,22 +1,19 @@
 var EventEmitter = require("eventemitter3");
 
-class Client {
+class Client extends EventEmitter {
 	constructor(address) {
+		super();
+		
 		this.ws = new WebSocket(address);
-		this.events = new EventEmitter();
 
 		this.ws.onmessage = function(message) {
 			message = JSON.parse(message.data);
-			this.events.emit(message.event, message.data)
+			this.emit(message.event, message.data)
 		}.bind(this);
 
 		this.ws.onclose = function() {
-			this.events.emit("disconnect");
+			this.emit("disconnect");
 		}.bind(this);
-	}
-
-	on(name, callback) {
-		this.events.on(name, callback);
 	}
 
 	send(name, message) {

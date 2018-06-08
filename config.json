@@ -1,5 +1,6 @@
 {
-	"chat": {
-		"port": 3000
-	}
+	"serverPort": 8000,
+	"chatPort": 3000,
+	"dbAddress": "mongodb://localhost:27017",
+	"tokenMaxAge": 28
 }

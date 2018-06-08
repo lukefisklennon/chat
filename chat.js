@@ -27,8 +27,8 @@ class Chat {
 	}
 }
 
-var server = new Server(config.chat.port);
-console.log("Chat server listening on port " + config.chat.port);
+var server = new Server(config.chatPort);
+console.log("Chat server listening on port " + config.chatPort);
 
 var chat = new Chat();
 

@@ -1,6 +1,6 @@
 var Client = require("./network.js");
 var Chat = require("./chat.js");
-require("./style.scss");
+require("./app.scss");
 
 var ws = new Client("ws://localhost:3000");
 
