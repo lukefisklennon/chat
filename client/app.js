@@ -1,8 +1,11 @@
-var Client = require("./network.js");
+var Client = require("./ws.js");
 var Chat = require("./chat.js");
+var cookies = require("js-cookie");
 require("./app.scss");
 
-var ws = new Client("ws://localhost:3000");
+var server = cookies.get("server");
+
+var ws = new Client("ws://" + server);
 
 var chat = new Chat();
 chat.focusInput();
@@ -16,4 +19,9 @@ ws.on("message", function(data) {
 	if (!data.mine) {
 		chat.appendMessage(Date.now(), data.text, false);
 	}
+});
+
+ws.on("connected", function() {
+	console.log("Connected to server");
+	ws.send("auth", cookies.get("token"));
 });

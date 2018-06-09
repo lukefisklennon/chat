@@ -1,6 +1,8 @@
 {
-	"serverPort": 8000,
-	"chatPort": 3000,
-	"dbAddress": "mongodb://localhost:27017",
-	"tokenMaxAge": 28
+	"serverPort": 4000,
+	"chatPort": 6000,
+	"staticPort": 8000,
+	"dbAddress": "localhost:27017",
+	"tokenMaxAge": 28,
+	"serverAddress": "localhost:4000"
 }

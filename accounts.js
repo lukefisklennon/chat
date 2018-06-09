@@ -28,6 +28,7 @@ class Accounts {
 	}
 
 	auth(token, callback) {
+		assert.notEqual(this.client, null);
 		var split = token.split(tokenDelim);
 		var series = split[0];
 		var string = split[1];

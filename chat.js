@@ -1,5 +1,5 @@
+var Server = require("./ws.js");
 var config = require("./config.json");
-var Server = require("./network.js");
 
 class Chat {
 	constructor() {
@@ -20,10 +20,6 @@ class Chat {
 				this.users[i].send("message", data);
 			}
 		}.bind(this));
-	}
-
-	on(name, callback) {
-		server.on(name, (callback).bind(this));
 	}
 }
 

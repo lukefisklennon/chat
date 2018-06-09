@@ -3,7 +3,7 @@ var EventEmitter = require("eventemitter3");
 class Client extends EventEmitter {
 	constructor(address) {
 		super();
-		
+
 		this.ws = new WebSocket(address);
 
 		this.ws.onmessage = function(message) {
@@ -11,8 +11,12 @@ class Client extends EventEmitter {
 			this.emit(message.event, message.data)
 		}.bind(this);
 
+		this.ws.onopen = function() {
+			this.emit("connected");
+		}.bind(this);
+
 		this.ws.onclose = function() {
-			this.emit("disconnect");
+			this.emit("disconnected");
 		}.bind(this);
 	}
 
